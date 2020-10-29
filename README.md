@@ -77,4 +77,36 @@ Criar testes automatizados tanto da api quanto do front seguindo a mesma estrutu
 
 ## Passo 4
 
-Além de criar os testes automatizados, realizar os testes manuais baseando-se no enunciado pedido ao desenvolvedor e partir disso crie um report (em markdown mesmo, pode ser inclusive aqui no readme de sua solução) criticando se de fato a demanda foi atendida pela solução entregue
+Além de criar os testes automatizados, realizar os testes manuais baseando-se no enunciado pedido ao desenvolvedor e partir disso crie um report (em markdown mesmo, pode ser inclusive aqui no readme de sua solução) criticando se de fato a demanda foi atendida pela solução entregue.
+
+
+
+## REPORT
+
+Desafio QA Guararapes
+Testes Automatizados e Manuais
+Ênfase
+Testes de Frontend
+Testes de Backend
+
+Listas
+Não ordenado (Testes Manuais)
+Teste realizado nos campos para cadastro
+Teste realizado nos botões para cadastro e ações da aplicação
+Ordenado (Testes Automatizados)
+Teste de frontend
+Teste de backend
+Links
+localhost
+
+Blocks of code (Exemplo adotado para realização dos testes automatizados)
+const Axios = require("axios");
+
+test('api should list materials', async () => {
+    let response = await Axios.get("http://localhost:8080/material");
+
+    expect(response.status).toBe(200);
+});
+Conclusão
+Testes automatizados: Testes de front e backend executados com sucesso a pós a execução dos arquivos "api.test.js" e "front.test.js"
+Testes manuais: Todos os campos e suas funcionalizades atendem os requisitos propostos a o desenvolvedor. Os campos funcionam perfeitamente, o botões tanto de ação como os de cadastro responde perfeitamente, assim também como as mensagens de retorno após ações de cadastro ou auteração de itens
